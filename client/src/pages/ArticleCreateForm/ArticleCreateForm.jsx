@@ -31,10 +31,14 @@ export default function ArticleCreateForm() {
 
     return (
         <>
-            <h1 className="p-10 text-center">Article create form</h1>
+            <h1 className="rounded-lg border-2 border-gray-800 bg-gray-200 p-10 text-center text-gray-800">
+                Article create form
+            </h1>
             <form className="">
                 <div className="flex items-center justify-center">
-                    <p className="b mr-2">Article name:</p>
+                    <p className="5 rounded-md border border-gray-700 bg-gray-200 px-3 py-2 text-center font-semibold text-gray-700">
+                        Article name:
+                    </p>
                     <input
                         type="text"
                         name="name"
@@ -47,7 +51,9 @@ export default function ArticleCreateForm() {
 
                 <br></br>
                 <div className="flex items-center justify-center">
-                    <p className="mr-2">Header name:</p>
+                    <p className="5 rounded-md border border-gray-700 bg-gray-200 px-3 py-2 text-center font-semibold text-gray-700">
+                        Header name:
+                    </p>
                     <input
                         type="text"
                         name="heading"
@@ -59,7 +65,9 @@ export default function ArticleCreateForm() {
                 </div>
                 <br></br>
                 <div className="flex items-center justify-center">
-                    <p className="mr-2">Article name:</p>
+                    <p className="5 rounded-md border border-gray-700 bg-gray-200 px-3 py-2 text-center font-semibold text-gray-700">
+                        Text:
+                    </p>
                     <input
                         type="text"
                         name="body"
@@ -72,7 +80,9 @@ export default function ArticleCreateForm() {
 
                 <br></br>
                 <div className="flex items-center justify-center">
-                    <p className="mr-2">Article name:</p>
+                    <p className="5 rounded-md border border-gray-700 bg-gray-200 px-3 py-2 text-center font-semibold text-gray-700">
+                         Header 2:
+                    </p>
                     <input
                         type="text"
                         name="heading2"
@@ -85,7 +95,9 @@ export default function ArticleCreateForm() {
 
                 <br></br>
                 <div className="flex items-center justify-center">
-                    <p className="mr-2">Article name:</p>
+                    <p className="5 rounded-md border border-gray-700 bg-gray-200 px-3 py-2 text-center font-semibold text-gray-700">
+                         Text:
+                    </p>
                     <textarea
                         type="text"
                         name="body2"
@@ -98,7 +110,9 @@ export default function ArticleCreateForm() {
 
                 <br></br>
                 <div className="flex items-center justify-center">
-                    <p className="mr-2">Article name:</p>
+                    <p className="5 rounded-md border border-gray-700 bg-gray-200 px-3 py-2 text-center font-semibold text-gray-700">
+                        Reference:
+                    </p>
                     <textarea
                         type="text"
                         name="reference"
@@ -111,7 +125,9 @@ export default function ArticleCreateForm() {
 
                 <br></br>
                 <div className="flex items-center justify-center">
-                    <p className="mr-2">Article name:</p>
+                    <p className="5 rounded-md border border-gray-700 bg-gray-200 px-3 py-2 text-center font-semibold text-gray-700">
+                         Content:
+                    </p>
                     <textarea
                         type="text"
                         name="content"
@@ -124,7 +140,9 @@ export default function ArticleCreateForm() {
 
                 <br></br>
                 <div className="flex items-center justify-center">
-                    <p className="mr-2">Article name:</p>
+                    <p className="5 rounded-md border border-gray-700 bg-gray-200 px-3 py-2 text-center font-semibold text-gray-700">
+                        Author:
+                    </p>
                     <input
                         type="text"
                         name="author"
@@ -138,7 +156,7 @@ export default function ArticleCreateForm() {
                 <br></br>
                 <div className="flex items-center justify-center">
                     <button
-                        className='shadow-lg relative mr-2 inline-block px-3 py-1 rounded-md border border-transparent transition-colors duration-300 hover:bg-green-500  hover:text-white'
+                        className="relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-lg transition-colors duration-300 hover:bg-green-500 hover:text-white"
                         onClick={handlePost}
                     >
                         Create Article
@@ -146,7 +164,9 @@ export default function ArticleCreateForm() {
                 </div>
             </form>
             <Link to={'/'}>
-                <p className='shadow-lg relative mr-2 inline-block px-3 py-1 rounded-md border border-transparent transition-colors duration-300 hover:bg-red-500  hover:text-white '>Go back</p>
+                <p className="relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-lg transition-colors duration-300 hover:bg-red-500 hover:text-white">
+                    Go back
+                </p>
             </Link>
         </>
     )
