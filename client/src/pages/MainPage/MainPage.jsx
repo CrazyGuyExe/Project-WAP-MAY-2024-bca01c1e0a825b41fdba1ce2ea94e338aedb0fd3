@@ -17,6 +17,10 @@ export default function MainPage() {
     fetchRandomArticle();
   }, []);
 
+  const shorterText = (body, length = 100) => {
+    if (body.length <= length) return body;
+    else return body.substring(0, length) + "...";
+  };
   return (
     <div className="mainPage">
       <h1>Main page</h1>
@@ -31,7 +35,10 @@ export default function MainPage() {
       {randomArticle && (
         <div className="randomArticle">
           <h2>Recommendation:</h2>
-          <ArticleLink {...randomArticle} />
+          <h3>
+            <ArticleLink {...randomArticle} />
+          </h3>
+          <p>{shorterText(randomArticle.body)}</p>
         </div>
       )}
     </div>
