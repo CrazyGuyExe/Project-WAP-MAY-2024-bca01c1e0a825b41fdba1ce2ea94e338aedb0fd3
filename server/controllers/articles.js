@@ -115,3 +115,19 @@ exports.searchArticlesByName = async (req, res) => {
     });
   }
 };
+exports.getRandomArticle = async (req, res) => {
+  try {
+    const count = await Article.countDocuments();
+    const randomIndex = Math.floor(Math.random() * count);
+    const randomArticle = await Article.findOne().skip(randomIndex);
+    if (randomArticle) {
+      return res.status(200).send({
+        msg: "Random article found",
+        payload: randomArticle,
+      });
+    }
+    res.status(404).send({ msg: "Article not found" });
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};

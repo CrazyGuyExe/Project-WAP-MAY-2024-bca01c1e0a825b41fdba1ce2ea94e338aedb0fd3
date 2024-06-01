@@ -3,6 +3,8 @@ var router = express.Router();
 
 const articlesController = require("../controllers/articles");
 
+router.get("/random", articlesController.getRandomArticle);
+
 router.get("/", articlesController.getAllArticles);
 
 router.get("/:id", articlesController.getArticlesById);

@@ -106,4 +106,19 @@ export const searchArticlesByName = async (searchTerm) => {
     };
   }
 };
+export const getRandomArticle = async () => {
+  const req = await fetch("http://localhost:3000/articles/random", {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    method: "GET",
+  });
+  const data = await req.json();
+  return {
+    status: req.status,
+    payload: data.payload,
+    msg: data.msg,
+  };
+};
 
