@@ -76,7 +76,7 @@ export default function ArticleView() {
       <div dangerouslySetInnerHTML={{ __html: article.content }} />
       <p>Reference: {article.reference}</p>
       <p>Author: {article.author}</p>
-      <p>Date of creation: {article.date}</p>
+      <p>Last Edited: {article.date}</p>
       <br></br>
 
       <Link to={`/updatearticle/${id}`}>
