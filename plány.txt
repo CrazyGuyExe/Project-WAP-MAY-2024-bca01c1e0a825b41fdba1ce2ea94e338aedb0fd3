@@ -1,0 +1,2 @@
+Přidání obrázků do databáze při vytváření článku a zobrazovat je při zobrazení článku
+Grafický design
