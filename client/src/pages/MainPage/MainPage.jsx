@@ -22,25 +22,25 @@ export default function MainPage() {
         else return body.substring(0, length) + '...'
     }
     return (//gray box
-        <div className=" mx-auto max-w-4xl p-8">  
+        <div className=" mx-auto max-w-4xl p-8 bg-zinc-400 mt-3 rounded-md">  
             <h1 className="mb-8 text-center text-4xl font-bold">Lidl Pedia</h1>
             <div className="mb-8 flex justify-center space-x-4">
               
                 <Link
                     to="/createarticle"
-                    className="relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-gray-400 hover:text-white"
+                    className="relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-gray-600 hover:text-white bg-slate-50"
                 >
                     Create article
                 </Link>
                 <Link
                     to="/articles"
-                    className="relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-gray-400 hover:text-white"
+                    className=" bg-slate-50 relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-gray-600 hover:text-white"
                 >
                     Articles
                 </Link>
                 <Link
                     to="/search"
-                    className="relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-gray-400 hover:text-white"
+                    className=" bg-slate-50 relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-gray-600 hover:text-white"
                 >
                     Search Articles
                 </Link>

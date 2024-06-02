@@ -38,7 +38,8 @@ export default function ArticleList() {
 
     return (
         <>
-            <h1 className="text-center">Article list</h1>
+        <div className='mx-auto max-w-xl my-auto bg-zinc-400 mt-3 rounded-md'>
+            <h1 className="text-center p-8">Article list</h1>
             <div className="flex justify-center">
                 <div className="p w-40 rounded-lg bg-gray-100 p-6 text-center shadow-md">
                     {articles.map((article, index) => (
@@ -49,11 +50,12 @@ export default function ArticleList() {
 
             <Link to={'/'}>
                 <div className="flex justify-center">
-                    <p className="p top-5 relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-red-500 hover:text-white">
+                    <p className=" text-slate-50 bg-gray-600 p top-5 relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-red-500 hover:text-white">
                         Go back
                     </p>
                 </div>
             </Link>
+            </div>
         </>
     )
 }

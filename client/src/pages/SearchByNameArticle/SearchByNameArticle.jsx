@@ -38,7 +38,7 @@ export default function SearchByNameArticle() {
     }, [searchTerm])
 
     return (
-        <div className="mx-auto max-w-4xl p-4">
+        <div className="mx-auto max-w-4xl p-4 bg-zinc-400 mt-3 rounded-md">
             <h1 className="mb-4 text-center text-4xl font-bold">Lidl Pedia</h1>
             <form className="mb-4 flex" onSubmit={handleSearch}>
                 <input
@@ -63,11 +63,13 @@ export default function SearchByNameArticle() {
                     <h2 className="mb-4 text-center text-2xl font-semibold">
                         Search Results:
                     </h2>
-                    <ul className="space-y-4">
+                    <div className="flex justify-center">
+                    <ul className="space-y-4 p w-auto rounded-lg bg-gray-100 p-6 text-center shadow-md">
                         {searchResults.map((article, index) => (
                             <ArticleLink key={index} {...article} />
                         ))}
                     </ul>
+                    </div>
                 </div>
             ) : (
                 isLoaded && (
@@ -78,7 +80,7 @@ export default function SearchByNameArticle() {
             )}
             <Link
                 to={'/'}
-                className="relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-red-500 hover:text-white"
+                className=" bg-slate-50 relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-red-500 hover:text-white"
             >
                 <p>Go back</p>
             </Link>
