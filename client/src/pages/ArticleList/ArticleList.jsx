@@ -43,9 +43,12 @@ export default function ArticleList() {
             <div className="flex justify-center">
                 <div className="p w-40 rounded-lg bg-gray-100 p-6 text-center shadow-md">
                     {articles.map((article, index) => (
+                        <>
                         <ArticleLink key={index} {...article} />
+                        <br></br>
+                        </>
                     ))}
-                </div>
+                </div>  
             </div>
 
             <Link to={'/'}>
