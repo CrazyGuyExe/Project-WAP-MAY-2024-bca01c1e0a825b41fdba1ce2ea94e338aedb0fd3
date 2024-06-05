@@ -12,8 +12,7 @@ export default function SearchByNameArticle() {
         return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '');
     };
 
-    const handleSearch = async (e) => {
-        e.preventDefault();
+    const fetchArticles = async (term) => {
         try {
             const trimmedSearchTerm = removeWhitespaceAndDiacritics(searchTerm.toLowerCase());
             const response = await searchArticlesByName(trimmedSearchTerm);
@@ -36,14 +35,19 @@ export default function SearchByNameArticle() {
     };
 
     useEffect(() => {
-        setSearchResults([]);
-        setLoaded(false);
+        if (searchTerm) {
+            fetchArticles(searchTerm);
+        } else {
+            setSearchResults([]);
+            setLoaded(false);
+        }
     }, [searchTerm]);
 
     return (
+
             <div className="mx-auto max-w-4xl p-4 bg-zinc-400 mt-3 rounded-md">
                 <h1 className="mb-4 text-center text-4xl font-bold">Lidl Pedia</h1>
-                <form className="mb-4 flex" onSubmit={handleSearch}>
+                <form className="mb-4 flex" onSubmit={(e) => e.preventDefault()}>
                     <input
                         type="text"
                         placeholder="Search by name"
