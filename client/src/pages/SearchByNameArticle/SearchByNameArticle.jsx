@@ -1,45 +1,51 @@
-import React, { useState, useEffect } from 'react'
-import { searchArticlesByName } from '../../models/Article'
-import ArticleLink from '../ArticleList/ArticleLink'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { searchArticlesByName } from '../../models/Article';
+import ArticleLink from '../ArticleList/ArticleLink';
+import { Link } from 'react-router-dom';
 
 export default function SearchByNameArticle() {
-    const [searchTerm, setSearchTerm] = useState('')
-    const [searchResults, setSearchResults] = useState([])
-    const [isLoaded, setLoaded] = useState(false)
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
+    const [isLoaded, setLoaded] = useState(false);
 
-    const handleSearch = async (e) => {
-        e.preventDefault()
+    const removeWhitespaceAndDiacritics = (text) => {
+        return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '');
+    };
+
+    const fetchArticles = async (term) => {
         try {
-            const response = await searchArticlesByName(searchTerm)
+            const trimmedSearchTerm = removeWhitespaceAndDiacritics(searchTerm.toLowerCase());
+            const response = await searchArticlesByName(trimmedSearchTerm);
             if (response.status === 200) {
                 const articles = response.payload.filter(
                     (article) =>
                         article.name &&
-                        article.name
-                            .toLowerCase()
-                            .includes(searchTerm.toLowerCase())
-                )
-                setSearchResults(articles)
-                setLoaded(true)
+                        removeWhitespaceAndDiacritics(article.name.toLowerCase()).includes(trimmedSearchTerm)
+                );
+                setSearchResults(articles);
+                setLoaded(true);
             } else {
-                console.error('Failed to fetch articles')
-                setLoaded(null)
+                console.error('Failed to fetch articles');
+                setLoaded(null);
             }
         } catch (error) {
-            console.error('Error while searching articles:', error)
-            setLoaded(null)
+            console.error('Error while searching articles:', error);
+            setLoaded(null);
         }
-    }
+    };
 
     useEffect(() => {
-        setSearchResults([])
-        setLoaded(false)
-    }, [searchTerm])
+        if (searchTerm) {
+            fetchArticles(searchTerm);
+        } else {
+            setSearchResults([]);
+            setLoaded(false);
+        }
+    }, [searchTerm]);
 
     return (
         <div className="mx-auto max-w-4xl p-4 bg-zinc-400 mt-3 rounded-md">
-            <h1 className="mb-4 text-center text-4xl font-bold border-b border-black pb-3">Lidl Pedia</h1>
+            <h1 className="mb-4 text-center text-4xl font-bold">Lidl Pedia</h1>
             <form className="mb-4 flex" onSubmit={handleSearch}>
                 <input
                     type="text"
@@ -84,20 +90,6 @@ export default function SearchByNameArticle() {
             >
                 <p>Go back</p>
             </Link>
-            <div className='z-10 border-t border-black mt-20 flex justify-end'>
-            <div className=' pt-3 text-3xl mr-32'>
-                <p>Our Free Encyclopedia</p>
-            </div>
-                <div>
-            <p className='px-2 pt-3'>Matěj Landa </p>
-            <p className='px-2 pt-2'>Marek Kubelka</p>
-            </div> 
-            <div>
-            <p className='px-2 pt-3'>Dominick Correia</p>
-            <p className='px-2 pt-2'>Vojta Vlček</p>
-            </div>
-           
-            </div>
         </div>
     )
 }
