@@ -46,7 +46,7 @@ export default function SearchByNameArticle() {
     return (
         <div className="mx-auto max-w-4xl p-4 bg-zinc-400 mt-3 rounded-md">
             <h1 className="mb-4 text-center text-4xl font-bold">Lidl Pedia</h1>
-            <form className="mb-4 flex" onSubmit={handleSearch}>
+            <form className="mb-4 flex" onSubmit={(e) => e.preventDefault()}>
                 <input
                     type="text"
                     placeholder="Search by name"
