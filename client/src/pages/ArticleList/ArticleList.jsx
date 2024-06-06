@@ -44,7 +44,8 @@ export default function ArticleList() {
                 <div className="p w-80 rounded-lg bg-gray-100 p-6 text-center shadow-md m-6">
                     {articles.map((article, index) => (
                         <>
-                        <ArticleLink key={index} {...article} />
+                        <div className="rounded bg-gray-100 px-4 py-2 shadow-sm transition-colors duration-300 hover:bg-white"> <ArticleLink key={index} {...article} /></div>
+                        
                         <br></br>
                         </>
                     ))}

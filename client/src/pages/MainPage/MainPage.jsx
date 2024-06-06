@@ -25,7 +25,7 @@ export default function MainPage() {
     }
     return (//gray box
         <div className=" mx-auto max-w-4xl p-8 bg-zinc-400 mt-3 rounded-md">  
-            <h1 className="mb-7 text-center text-4xl font-bold border-b border-black pb-3">Lidl Pedia</h1>
+            <h1 className="mb-7 text-center text-4xl font-bold border-b border-black pb-3">NÁZEV</h1>
             <div className="mb-8 flex justify-center space-x-4">
               
                 <Link
