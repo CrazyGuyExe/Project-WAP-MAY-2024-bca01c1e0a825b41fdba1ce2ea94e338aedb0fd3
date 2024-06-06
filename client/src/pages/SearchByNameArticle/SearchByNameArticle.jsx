@@ -39,7 +39,7 @@ export default function SearchByNameArticle() {
 
     return (
         <div className="mx-auto max-w-4xl p-4 bg-zinc-400 mt-3 rounded-md">
-            <h1 className="mb-4 text-center text-4xl font-bold">Lidl Pedia</h1>
+            <h1 className="mb-4 text-center text-4xl font-bold border-b border-black pb-3">Lidl Pedia</h1>
             <form className="mb-4 flex" onSubmit={handleSearch}>
                 <input
                     type="text"
@@ -84,6 +84,20 @@ export default function SearchByNameArticle() {
             >
                 <p>Go back</p>
             </Link>
+            <div className='z-10 border-t border-black mt-20 flex justify-end'>
+            <div className=' pt-3 text-3xl mr-32'>
+                <p>Our Free Encyclopedia</p>
+            </div>
+                <div>
+            <p className='px-2 pt-3'>Matěj Landa </p>
+            <p className='px-2 pt-2'>Marek Kubelka</p>
+            </div> 
+            <div>
+            <p className='px-2 pt-3'>Dominick Correia</p>
+            <p className='px-2 pt-2'>Vojta Vlček</p>
+            </div>
+           
+            </div>
         </div>
     )
 }
