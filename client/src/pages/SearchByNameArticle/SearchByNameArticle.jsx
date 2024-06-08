@@ -44,7 +44,7 @@ export default function SearchByNameArticle() {
     }, [searchTerm]);
 
     return (
-        <div className="mx-auto max-w-4xl p-4 bg-zinc-400 mt-3 rounded-md">
+        <div className="mx-auto max-w-4xl p-4 bg-gray-50 mt-3 rounded-md">
             <h1 className="mb-4 text-center text-4xl font-bold">Lidl Pedia</h1>
             <form className="mb-4 flex" onSubmit={(e) => e.preventDefault()}>
                 <input

@@ -5,7 +5,7 @@ export default function CreatedArticle() {
 
     return (
         <>
-            <div className="mx-auto max-w-4xl p-8 bg-zinc-400 mt-3 rounded-md">
+            <div className="mx-auto max-w-4xl p-8 bg-gray-50 mt-3 rounded-md">
                 <div className="mb-4 rounded-md bg-gray-100 p-4 shadow-md">
                     <p className="mb-2 text-xl font-semibold"> Created article: {id}
                     </p>

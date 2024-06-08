@@ -31,7 +31,7 @@ export default function ArticleCreateForm() {
 
     return (//setter max width
        <> 
-    <div className=" max-w-3xl mx-auto p-8  bg-zinc-400 mt-3 rounded-md">
+    <div className=" max-w-3xl mx-auto p-8  bg-gray-50 mt-3 rounded-md">
         <h1 className="text-center text-2xl font-semibold mb-6">Article Create Form</h1>
         <form>
             <div className="grid grid-cols-1 gap-6">
