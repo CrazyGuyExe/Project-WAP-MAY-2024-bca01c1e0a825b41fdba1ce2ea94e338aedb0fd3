@@ -25,7 +25,7 @@ export default function MainPage() {
         else return body.substring(0, length) + '...'
     }
     return (
-        <div className="bg-stone-700 h-screen" >
+        <div className="bg-stone-700 min-h-screen flex flex-col" >
             <header className="bg-gray-50 shadow-sm">
                 <div className="container mx-auto flex items-center justify-between p-4">
                     <nav className="flex space-x-4">

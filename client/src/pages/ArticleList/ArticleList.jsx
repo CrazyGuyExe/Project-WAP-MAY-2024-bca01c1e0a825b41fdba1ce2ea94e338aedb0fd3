@@ -37,7 +37,7 @@ export default function ArticleList() {
     }
 
     return (
-        <div className='bg-stone-700 h-screen pt-3'>
+        <div className='bg-stone-700 min-h-screen flex flex-col pt-3'>
         <div className='mx-auto max-w-4xl  bg-gray-50  rounded-md '>
             <h1 className="text-center p-8 border-b border-black w-5/6 mx-auto">Article list</h1>
             <div className="flex justify-center">

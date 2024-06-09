@@ -44,7 +44,7 @@ export default function SearchByNameArticle() {
     }, [searchTerm]);
 
     return (
-        <div className='bg-stone-700 h-screen pt-3'>
+        <div className='bg-stone-700 min-h-screen flex flex-col pt-3'>
         <div className="mx-auto max-w-4xl p-4 bg-gray-50 rounded-md">
             <h1 className="mb-4 text-center text-4xl font-bold border-b border-black pb-3">KnowPedia</h1>
             <form className="mb-4 flex" onSubmit={(e) => e.preventDefault()}>

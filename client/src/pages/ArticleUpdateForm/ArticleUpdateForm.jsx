@@ -62,7 +62,7 @@ export default function ArticleUpdateForm() {
     }
 
     return (
-<div className='bg-stone-700 h-screen'>
+<div className='bg-stone-700 min-h-screen flex flex-col'>
         <div className="container mx-auto p-6">
             <div className="rounded-lg bg-white p-6 shadow">
                 <h1>Article Update Form</h1>

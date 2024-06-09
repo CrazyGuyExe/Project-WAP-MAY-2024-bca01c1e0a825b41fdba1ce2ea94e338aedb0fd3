@@ -4,7 +4,7 @@ export default function CreatedArticle() {
     const { id } = useParams()
 
     return (
-        <div className='bg-stone-700 h-screen pt-3'>
+        <div className='bg-stone-700 min-h-screen flex flex-col pt-3'>
             <div className="mx-auto max-w-4xl p-8 bg-gray-50 rounded-md">
                 <div className="mb-4 rounded-md bg-gray-200 p-4 shadow-md">
                     <p className="mb-2 text-xl font-semibold"> Created article: {id}

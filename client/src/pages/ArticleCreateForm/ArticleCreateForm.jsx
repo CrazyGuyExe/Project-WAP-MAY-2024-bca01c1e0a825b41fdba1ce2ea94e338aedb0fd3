@@ -30,7 +30,7 @@ export default function ArticleCreateForm() {
     }
 
     return (//setter max width
-       <div className='bg-stone-700 h-screen pt-3'> 
+       <div className='bg-stone-700 min-h-screen flex flex-col pt-3'> 
     <div className=" max-w-3xl mx-auto p-8  bg-gray-50  rounded-md">
         <h1 className="text-center text-2xl font-semibold mb-6 border-b border-black pb-2">Article Create Form</h1>
         <form>

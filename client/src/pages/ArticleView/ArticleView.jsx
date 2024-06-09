@@ -64,7 +64,7 @@ export default function ArticleView() {
     if (!isLoaded) return <h1>Loading article...</h1>
 
     return (
-        <div className='bg-stone-700 h-screen'>
+        <div className='bg-stone-700 min-h-screen flex flex-col'>
         <div className="container mx-auto p-6 ">
             <div className="rounded-lg bg-white p-6 shadow">
                 <h1 className='pb-4 text-center'>{article.name}</h1>
