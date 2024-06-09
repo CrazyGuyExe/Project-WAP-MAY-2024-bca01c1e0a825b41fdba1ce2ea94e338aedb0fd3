@@ -62,8 +62,8 @@ export default function ArticleUpdateForm() {
     }
 
     return (
-
-        <div className="container mx-auto p-6 ">
+<div className='bg-stone-700 h-screen'>
+        <div className="container mx-auto p-6">
             <div className="rounded-lg bg-white p-6 shadow">
                 <h1>Article Update Form</h1>
                 <p className="mb-4 text-sm text-gray-600">Article ID: {id}</p>
@@ -135,12 +135,12 @@ export default function ArticleUpdateForm() {
                         placeholder="Enter author name"
                         onChange={handleChange}
                         className="w-full rounded border border-gray-300 p-2"
-                    />   <div className='flex justify-center'> 
+                    />   <div className='flex justify-center border-t border-black pt-2'> 
                     <button
                    
                         type="submit"
                         
-                        className="w-200 rounded bg-white px-4 py-2 shadow-sm transition-colors duration-300 hover:bg-green-500 hover:text-white"
+                        className="w-200 rounded bg-slate-200 px-4 py-2 shadow-sm transition-colors duration-300 hover:bg-green-500 hover:text-white"
                     >
                      
                         Update article
@@ -150,11 +150,12 @@ export default function ArticleUpdateForm() {
                 {info && <p className="mt-4 text-red-500">{info}</p>}
                 <Link
                     to={'/'}
-                    className="rounded bg-white px-4 py-2 shadow-sm transition-colors duration-300 hover:bg-red-500 hover:text-white"
+                    className="rounded bg-slate-200 px-4 py-2 shadow-sm transition-colors duration-300 hover:bg-red-500 hover:text-white"
                 >
                     Go back
                 </Link>
             </div>
+        </div>
         </div>
     )
 }

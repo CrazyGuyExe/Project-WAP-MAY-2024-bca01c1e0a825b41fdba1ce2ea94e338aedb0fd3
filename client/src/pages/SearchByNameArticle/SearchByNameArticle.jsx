@@ -44,8 +44,9 @@ export default function SearchByNameArticle() {
     }, [searchTerm]);
 
     return (
-        <div className="mx-auto max-w-4xl p-4 bg-gray-50 mt-3 rounded-md">
-            <h1 className="mb-4 text-center text-4xl font-bold">Lidl Pedia</h1>
+        <div className='bg-stone-700 h-screen pt-3'>
+        <div className="mx-auto max-w-4xl p-4 bg-gray-50 rounded-md">
+            <h1 className="mb-4 text-center text-4xl font-bold border-b border-black pb-3">KnowPedia</h1>
             <form className="mb-4 flex" onSubmit={(e) => e.preventDefault()}>
                 <input
                     type="text"
@@ -56,7 +57,7 @@ export default function SearchByNameArticle() {
                 />
                 <button
                     type="submit"
-                    className="rounded-r-md bg-white px-4 py-2 text-black shadow-sm duration-300 hover:bg-green-600 hover:text-white"
+                    className="rounded-r-md bg-slate-200 px-4 py-2 text-black shadow-sm duration-300 hover:bg-green-600 hover:text-white"
                 >
                     Search
                 </button>
@@ -69,7 +70,7 @@ export default function SearchByNameArticle() {
                     <h2 className="mb-4 text-center text-2xl font-semibold">
                         Search Results:
                     </h2>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center ">
                     <ul className="space-y-4 p w-auto rounded-lg bg-gray-100 p-6 text-center shadow-md">
                         {searchResults.map((article, index) => (
                             <ArticleLink key={index} {...article} />
@@ -86,10 +87,11 @@ export default function SearchByNameArticle() {
             )}
             <Link
                 to={'/'}
-                className=" bg-slate-50 relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-red-500 hover:text-white"
+                className=" bg-slate-200 relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-red-500 hover:text-white"
             >
                 <p>Go back</p>
             </Link>
+        </div>
         </div>
     )
 }

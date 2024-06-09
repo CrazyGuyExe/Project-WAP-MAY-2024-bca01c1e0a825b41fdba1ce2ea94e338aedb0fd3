@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom'
 import { getRandomArticle } from '../../models/Article'
 import ArticleLink from '../ArticleList/ArticleLink'
 
+
+
 export default function MainPage() {
+   
     const [randomArticle, setRandomArticle] = useState(null)
 
     useEffect(() => {
@@ -22,12 +25,12 @@ export default function MainPage() {
         else return body.substring(0, length) + '...'
     }
     return (
-        <div className="">
+        <div className="bg-stone-700 h-screen" >
             <header className="bg-gray-50 shadow-sm">
                 <div className="container mx-auto flex items-center justify-between p-4">
                     <nav className="flex space-x-4">
                     <h2 className="">
-                    NÁZEV
+                    KnowPedia
                 </h2>
                         <Link
                             to="/createarticle"
@@ -56,7 +59,7 @@ export default function MainPage() {
                
 
                 {randomArticle && (
-                    <div className="p rounded-lg bg-gray-100 p-6 shadow-md">
+                    <div className="p rounded-lg bg-gray-200 p-6 shadow-md">
                         <h2 className="mb-4 text-2xl font-semibold">
                             Recommendation:
                         </h2>
@@ -71,7 +74,7 @@ export default function MainPage() {
                 <footer className="mt-16 border-t border-gray-300 pt-4 font-medium">
                     <div className="flex justify-between text-gray-600">
                         <div>
-                            <p className="text-lg font-semibold">
+                            <p className="text-2xl font-semibold  p-8 ml-44">
                                 Our Free Encyclopedia
                             </p>
                         </div>
@@ -90,4 +93,5 @@ export default function MainPage() {
             </div>
         </div>
     )
+   
 }

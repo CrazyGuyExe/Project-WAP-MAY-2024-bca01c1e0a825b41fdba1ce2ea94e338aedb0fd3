@@ -64,13 +64,14 @@ export default function ArticleView() {
     if (!isLoaded) return <h1>Loading article...</h1>
 
     return (
-        <div className="container mx-auto p-6">
+        <div className='bg-stone-700 h-screen'>
+        <div className="container mx-auto p-6 ">
             <div className="rounded-lg bg-white p-6 shadow">
-                <h1>{article.name}</h1>
-                <h2>{article.heading}</h2>
-                <p>{article.body}</p>
+                <h1 className='pb-4 text-center'>{article.name}</h1>
+                <h2 >{article.heading}</h2>
+                <p className='py-3'>{article.body}</p>
                 <h2>{article.heading2}</h2>
-                <p>{article.body2}</p>
+                <p className='py-3'>{article.body2}</p>
                 <div
                     dangerouslySetInnerHTML={{ __html: article.content }}
                     
@@ -84,18 +85,19 @@ export default function ArticleView() {
                 <div className="mt-6 flex space-x-4">
                     <Link
                         to={'/'}
-                        className="rounded bg-white px-4 py-2 shadow-sm transition-colors duration-300 hover:bg-red-500 hover:text-white"
+                        className="rounded bg-slate-200 px-4 py-2 shadow-sm transition-colors duration-300 hover:bg-red-500 hover:text-white"
                     >
                         Go back
                     </Link>
                     <Link
                         to={`/updatearticle/${id}`}
-                        className="rounded bg-white px-4 py-2 shadow-sm transition-colors duration-300 hover:bg-green-500 hover:text-white"
+                        className="rounded bg-slate-200 px-4 py-2 shadow-sm transition-colors duration-300 hover:bg-green-500 hover:text-white"
                     >
                         Update article
                     </Link>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

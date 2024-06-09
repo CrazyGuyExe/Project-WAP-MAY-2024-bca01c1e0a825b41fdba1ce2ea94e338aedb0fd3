@@ -37,15 +37,14 @@ export default function ArticleList() {
     }
 
     return (
-        <>
-        <div className='mx-auto max-w-4xl  bg-gray-50 mt-3 rounded-md '>
+        <div className='bg-stone-700 h-screen pt-3'>
+        <div className='mx-auto max-w-4xl  bg-gray-50  rounded-md '>
             <h1 className="text-center p-8 border-b border-black w-5/6 mx-auto">Article list</h1>
             <div className="flex justify-center">
                 <div className="p w-80 rounded-lg bg-gray-100 p-6 text-center shadow-md m-6">
                     {articles.map((article, index) => (
                         <>
-                        <div className="rounded bg-gray-100 px-4 py-2 shadow-sm transition-colors duration-300 hover:bg-white"> <ArticleLink key={index} {...article} /></div>
-                        
+                        <div className="rounded bg-gray-300 px-4 py-2 shadow-sm transition-colors duration-300 hover:bg-white"> <ArticleLink key={index} {...article} /></div>                       
                         <br></br>
                         </>
                     ))}
@@ -59,12 +58,12 @@ export default function ArticleList() {
                     </p>
                 </div>
             </Link>
-            <footer className="border-t border-gray-300 mt-16 pt-4 font-medium">
+            <footer className="border-t border-gray-300 mt-16 pt-4 font-medium w-5/6 mx-auto">
                 <div className="flex justify-between text-gray-600">
                     <div>
-                        <p className="text-lg font-semibold">Our Free Encyclopedia</p>
+                        <p className="text-2xl font-semibold  p-6 ml-44">Our Free Encyclopedia</p>
                     </div>
-                    <div className="font-medium">
+                    <div className="font-medium pb-4">
                         <div>
                             <p>Matěj Landa</p>
                             <p>Marek Kubelka</p>
@@ -80,6 +79,6 @@ export default function ArticleList() {
             </div>
            
             
-        </>
+        </div>
     )
 }

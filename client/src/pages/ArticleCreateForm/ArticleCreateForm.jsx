@@ -30,9 +30,9 @@ export default function ArticleCreateForm() {
     }
 
     return (//setter max width
-       <> 
-    <div className=" max-w-3xl mx-auto p-8  bg-gray-50 mt-3 rounded-md">
-        <h1 className="text-center text-2xl font-semibold mb-6">Article Create Form</h1>
+       <div className='bg-stone-700 h-screen pt-3'> 
+    <div className=" max-w-3xl mx-auto p-8  bg-gray-50  rounded-md">
+        <h1 className="text-center text-2xl font-semibold mb-6 border-b border-black pb-2">Article Create Form</h1>
         <form>
             <div className="grid grid-cols-1 gap-6">
                 <div className="flex items-center">
@@ -144,10 +144,10 @@ export default function ArticleCreateForm() {
                     />
                 </div>
 
-                <div className="flex justify-center mt-6">
+                <div className="flex justify-center mt-6 border-t border-black pt-5">
                     <button
                         type="button"
-                        className=" bg-slate-50 relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-green-500 hover:text-white"
+                        className=" bg-slate-200 relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-green-500 hover:text-white"
                         onClick={handlePost}
                     >
                         Create Article
@@ -157,13 +157,13 @@ export default function ArticleCreateForm() {
         </form>
         <div className="flex justify-center mt-4">
             <Link to="/">
-                <p className=" bg-slate-50 relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-red-500 hover:text-white">
+                <p className=" bg-slate-200 relative mr-2 inline-block rounded-md border border-transparent px-3 py-1 shadow-sm transition-colors duration-300 hover:bg-red-500 hover:text-white">
                     Go back
                 </p>
             </Link>
         </div>
     </div>
-</>
+</div>
 
     )
 }
