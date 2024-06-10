@@ -86,7 +86,7 @@ export default function ArticleUpdateForm() {
                         onChange={handleChange}
                         className="w-full rounded border border-gray-300 p-2"
                     />
-                    <input
+                    <textarea
                         type="text"
                         value={formData.body || ''}
                         name="body"
@@ -103,7 +103,7 @@ export default function ArticleUpdateForm() {
                         onChange={handleChange}
                         className="w-full rounded border border-gray-300 p-2"
                     />
-                    <input
+                    <textarea
                         type="text"
                         value={formData.body2 || ''}
                         name="body2"
@@ -119,7 +119,7 @@ export default function ArticleUpdateForm() {
                         onChange={handleChange}
                         className="w-full rounded border border-gray-300 p-2"
                     />
-                    <input
+                    <textarea
                         type="text"
                         value={formData.content || ''}
                         name="content"
